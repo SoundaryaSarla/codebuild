@@ -25,10 +25,11 @@ phases:
       - sam validate --template $TEMPLATE 
       - sam build -t $TEMPLATE
       - sam package --output-template-file template.yaml -t $TEMPLATE
+      - zip -r internal.zip template.yaml
 
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - target/template.yaml
+    - target/internal.zip
