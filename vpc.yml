@@ -14,7 +14,7 @@ Resources:
       EnableDnsHostnames: 'true'
       Tags:
       - Key: stack
-        Value: production
+        Value: !Ref Stage
 Outputs:
   VPCID:
     Description: Information about the VPC
