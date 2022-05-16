@@ -2,6 +2,9 @@ Parameters:
   CidrBlock:
     Type: String
     Default: '10.0.0.0/16'
+  Stage:
+    Type: String
+  
 Resources:
   VPC:
     Type: AWS::EC2::VPC
